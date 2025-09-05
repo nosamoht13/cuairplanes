@@ -26,7 +26,7 @@ const Grid = styled.div`
 const Block = styled.div`
   background: rgba(255,255,255,0.1);
   border: 2px solid rgba(255,255,255,0.35);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 14px 12px;
   text-align: center;
   backdrop-filter: blur(4px);

@@ -1,8 +1,10 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Navbar from "../Components/navbar";
 import HomepageImage from "../Images/HomepageImage.jpg";
 import Countdown from "../Components/Countdown";
+import Footer from "../Components/footer";
+import Navbar from "../Components/navbar";
+
 
 
 const dropIn = keyframes`
@@ -21,7 +23,7 @@ const HeaderText = styled.h1`
   font-size: clamp(32px, 6vw, 64px);
   text-align: center;
   color: #2D2C5E;
-  margin: 32px 16px;
+  margin: 60px 32px;
 
   animation:
     ${dropIn} 700ms ease-out both,
@@ -31,36 +33,20 @@ const HeaderText = styled.h1`
 `;
 
 const HomePageImageContainer = styled.img`
-  width: 60%;
-  height: 60%;
+  width: 74%;
+  height: auto;
   object-fit: cover;
   display: block;
-  margin: 16px auto 32px;
+  margin: 3rem auto;
   max-width: 100%;
-  border: 5px solid #000;
-  border-radius: 12px; /* subtle polish */
+  border: 5px solid #2D2C5E;
+
   
   animation:
     ${dropIn} 700ms ease-out both,
     ${trackingIn} 900ms ease-out both;
 `;
 
-const InformationContainer = styled.div`
-  display: flex;
-  flex-direction: row; 
-  align-items: center;       
-  justify-content: center;  
-  gap: 400px;                 
-  padding: 20px;
-  border-radius: 8px;
-`;
-
-const SectionContainer = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`
 
 const CountdownContainer = styled.section`
   display: flex;
@@ -68,12 +54,12 @@ const CountdownContainer = styled.section`
   align-items: center;  
   justify-content: center;
   margin: 60px auto;
-  padding: 48px 32px;   /* give it a touch more breathing room */
-  width: 92%;           /* was 85% */
-  max-width: 1200px;    /* was 1000px */
+  padding: 30px 0px;   
+  width: 75%;           
+  max-width: 1440;    
 
-  background: linear-gradient(135deg, #314E82, #24375e);
-  border-radius: 18px;
+  background: #2D2C5E;
+  border-radius: 0;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 
   text-align: center;
@@ -101,11 +87,55 @@ const CountdownHeaderText = styled.h2`
 
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
-  /* Soft glowing text effect */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4),
-               0 0 12px rgba(207,225,250,0.4);
 `;
+
+const Section = styled.section`
+max-width: 1100 px;
+margin: 48px auto 24px;
+padding: 0 24px;
+`
+// Wrap matches the photo width and centers it
+const InfoPanel = styled.section`
+  width: 75%;           /* ← same as HomePageImageContainer */
+  margin: 2rem auto;    /* centers under the photo */
+  background: #C6DCED;  /* light blue background */
+  padding: 24px 28px;   /* breathing room inside */
+  border: 5px solid #2D2C5E;   /* match image border */
+  box-sizing: border-box;       /* include border in width */
+`;
+
+// Two-column layout inside the light-blue panel
+const InformationGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+  justify-items: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr; /* side-by-side on desktop */
+    gap: 48px;
+  }
+`;
+
+const Subhead = styled.h2`
+  font-family: "FONTSPRING DEMO - Lupio ExtBd", sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 3.2vw, 40px);
+  color: #2D2C5E;
+  text-align: center;
+  margin: 0 0 10px;
+`;
+
+const Blurb = styled.p`
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #2D2C5E;
+`;
+
 
 const Homepage = () => {
   return (
@@ -114,22 +144,34 @@ const Homepage = () => {
       <HeaderText>COLUMBIA UNIVERSITY AIRPLANE CLUB</HeaderText>
       <HomePageImageContainer src={HomepageImage} alt="Homepage" />
 
-    <InformationContainer>
-        <SectionContainer>
-            <HeaderText>What We Do</HeaderText>
-            <p> This is Text</p>
-        </SectionContainer>
+  <InfoPanel>
+  <InformationGrid>
+    <div>
+      <Subhead>What We Do</Subhead>
+      <Blurb>
+        We design, build, and fly airplanes for the annual AIAA Design/Build/Fly competition.
+        Each year we take on a new challenge, working as a team to create and test an aircraft
+        while gaining hands-on experience in engineering and aviation.
+      </Blurb>
+    </div>
 
-        <SectionContainer>
-            <HeaderText>Competition</HeaderText>
-            <p> This is Text</p>
-        </SectionContainer>
-    </InformationContainer>
+    <div>
+      <Subhead>Competition</Subhead>
+      <Blurb>
+        This year’s AIAA Design/Build/Fly mission is to create a banner-towing bush plane. Our aircraft must carry rubber duck “passengers” and hockey puck cargo, then successfully deploy and release a banner in flight. The challenge pushes us to balance payload capacity, structural design, and innovative deployment systems while staying within strict size and cost limits.
+      </Blurb>
+    </div>
+  </InformationGrid>
+</InfoPanel>
+
+
 
         <CountdownContainer>
     <CountdownHeaderText>COUNTDOWN to DBF 2026:</CountdownHeaderText>
-    <Countdown targetDate="2026-04-15T09:00:00-04:00" />
+    <Countdown targetDate="2026-04-16T10:00:00-05:00" />
     </CountdownContainer>
+     <Footer />
+
     </>
   );
 };
