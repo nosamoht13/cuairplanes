@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cuairplanes/static/css/main.f855e6bc.css",
-    "main.js": "/cuairplanes/static/js/main.9e75eead.js",
+    "main.js": "/cuairplanes/static/js/main.e01fb40b.js",
     "static/media/CUACExperienceVideo.mp4": "/cuairplanes/static/media/CUACExperienceVideo.db430a24ab1a1ddec0f2.mp4",
     "static/media/pierce.jpg": "/cuairplanes/static/media/pierce.635b235e6689be1c3ee6.jpg",
     "static/media/HomepageImage.jpg": "/cuairplanes/static/media/HomepageImage.08c565f450f8e1202d54.jpg",
@@ -10,15 +10,16 @@
     "static/media/casey.jpg": "/cuairplanes/static/media/casey.3983ae1462790bf59d89.jpg",
     "static/media/alma.jpg": "/cuairplanes/static/media/alma.61ca20713b0e20b3b0e5.jpg",
     "static/media/sophie.jpg": "/cuairplanes/static/media/sophie.29c7e215ec5fbc365a61.jpg",
+    "static/media/arantxa.jpg": "/cuairplanes/static/media/arantxa.6b655225498a5c0dafee.jpg",
     "static/media/zoee.jpg": "/cuairplanes/static/media/zoee.554561c4339e33a9d40f.jpg",
     "static/media/sam.jpg": "/cuairplanes/static/media/sam.8528f47f45567a7c1205.jpg",
     "static/media/PlaneClubLogo.png": "/cuairplanes/static/media/PlaneClubLogo.efa8977557f9be9b58a0.png",
     "index.html": "/cuairplanes/index.html",
     "main.f855e6bc.css.map": "/cuairplanes/static/css/main.f855e6bc.css.map",
-    "main.9e75eead.js.map": "/cuairplanes/static/js/main.9e75eead.js.map"
+    "main.e01fb40b.js.map": "/cuairplanes/static/js/main.e01fb40b.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.9e75eead.js"
+    "static/js/main.e01fb40b.js"
   ]
 }
